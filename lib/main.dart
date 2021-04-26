@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
       home: Home(),
-  ));
-
+    ));
 
 class Home extends StatelessWidget {
   @override
@@ -15,11 +14,17 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.lightBlue[900],
-        )
-      ),
+          child: ElevatedButton.icon(
+        onPressed: () {},
+        icon: Icon(
+          Icons.mail,
+        ),
+        label: Text('Mail Me'),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.red[600], // background
+          onPrimary: Colors.white, // foreground
+        ),
+      )),
       floatingActionButton: FloatingActionButton(
         child: Text("Click"),
         onPressed: () {},
